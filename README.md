@@ -1,4 +1,4 @@
-# Mysql_Multiport_monitor_used_zabbix
+# 使用zabbix监控MYSQL多端口数据库服务
 
 ###说明
 1. zabbix监控机模版和被监控端脚本均根据percona-monitoring-plugins1.1.5-1版进行修改，因此被监控端安装条件同原版插件相同，比如，必须安装php,php-mysql模块   
@@ -35,12 +35,12 @@ cp userparameter_percona_mysql.conf /usr/local/zabbix/etc/zabbix_agentd.conf.d<b
 
 ###配置注意事项：
 
-1. 默认的mysql发现测了间隔为1小时.因此刚配置好，可能短时间内不能发现监听的端口，请耐心等待
-2. 关于被监控端脚本
-	脚本ss_get_mysql_stats.php中的用户名和密码根据实际情况进行修改
-		$mysql_user = 'MYSQL_USER';
-		$mysql_pass = 'MYSQL_PASSWORD';
-	脚本中get_mysql_stats_wrapper.sh包含了监控的地址，默认是127.0.0.1
+1. 默认的mysql发现测了间隔为1小时.因此刚配置好，可能短时间内不能发现监听的端口，请耐心等待<br>
+2. 关于被监控端脚本<br>
+	脚本ss_get_mysql_stats.php中的用户名和密码根据实际情况进行修改<br>
+		$mysql_user = 'MYSQL_USER';<br>
+		$mysql_pass = 'MYSQL_PASSWORD';<br>
+	脚本中get_mysql_stats_wrapper.sh包含了监控的地址，默认是127.0.0.1<br>
 	因此,命令行之行 mysql -u'MYSQL_USER' -p'MYSQL_PASSWORD' -h127.0.0.1 -P'MYSQL_PORT' 必须成功。否则监控采集不到任何数据.
 
 
