@@ -1,19 +1,19 @@
 # Mysql_Multiport_monitor_used_zabbix
 
-说明
+##说明
 ====
 1. zabbix监控机模版和被监控端脚本均根据percona-monitoring-plugins1.1.5-1版进行修改，因此被监控端安装条件同原版插件相同，比如，必须安装php,php-mysql模块
 2. mysql发现端口采用了网络端口监听的方法(当然也可以采用配置文件等静态的方法),这种方法的可取之处是动态发现，无需任何配置.
 3. 对原插件(percona-monitoring-plugins)中的脚本get_mysql_stats_wrapper.sh进行了修改,以适应多端口数据采集
 4. 因一台主机上多个mysql使用了同一个监控脚本，因此，要求多个mysql配置相同的用户名和密码,这样也是为了更标准化的配置.
 
-拓展思考
+##拓展思考
 =======
 因对mysql的监控不依赖于任何主机，只要有合适的权限配置，在任何一台主机上都可以监控所有设备的mysql服务。
 如想实现这种需求，需要对"端口发现机制"脚本和"wrapper"脚本进行适当修改.
 
 
-配置方法
+###配置方法
 ========
 一.zabbix监控机导入模板
 导入名为Mysql_Multiport.xml的模板,导入后,模版默认名为Percona MySQL Server Multiport Template。具体导入方法不再赘述
