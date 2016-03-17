@@ -17,19 +17,19 @@
 
 二.被监控端
 1.下载文件
-cd /oracle/lhx
-git clone https://github.com/lianghx7123/Mysql_Multiport_monitor_used_zabbix.git mysql_monitor
+cd /oracle/lhx<br>
+git clone https://github.com/lianghx7123/Mysql_Multiport_monitor_used_zabbix.git mysql_monitor<br>
 
 2.复制脚本文件并执行权限
-mkdir -p /var/lib/zabbix/percona/scripts/
-cp get_mysql_stats_wrapper.sh /var/lib/zabbix/percona/scripts/
-cp mysql_low_discovery.sh /var/lib/zabbix/percona/scripts/
-cp ss_get_mysql_stats.php /var/lib/zabbix/percona/scripts/
-chmod 755 /var/lib/zabbix/percona/scripts/*
+mkdir -p /var/lib/zabbix/percona/scripts/<br>
+cp get_mysql_stats_wrapper.sh /var/lib/zabbix/percona/scripts/<br>
+cp mysql_low_discovery.sh /var/lib/zabbix/percona/scripts/<br>
+cp ss_get_mysql_stats.php /var/lib/zabbix/percona/scripts/<br>
+chmod 755 /var/lib/zabbix/percona/scripts/*<br>
 
 3.复制zabbix配置文件
-cp userparameter_percona_mysql.conf /usr/local/zabbix/etc/zabbix_agentd.conf.d
-注意：请注意zabbix_agentd.conf文件的配置是否包含了以上路径
+cp userparameter_percona_mysql.conf /usr/local/zabbix/etc/zabbix_agentd.conf.d<br>
+注意：请注意zabbix_agentd.conf文件的配置是否包含了以上路径<br>
 
 4.重启zabbix agent
 
