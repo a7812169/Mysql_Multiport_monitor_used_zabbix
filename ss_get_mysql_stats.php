@@ -27,8 +27,8 @@ if ( !array_key_exists('SCRIPT_FILENAME', $_SERVER)
 # here, you can define them in another file named the same as this file, with a
 # .cnf extension.
 # ============================================================================
-$mysql_user = 'root';
-$mysql_pass = 'Qe091cs74';
+$mysql_user = 'MYSQL_USER';
+$mysql_pass = 'MYSQL_PASSWORD';
 $mysql_port = 3306;
 $mysql_ssl  = FALSE;   # Whether to use SSL to connect to MySQL.
 $mysql_ssl_key  = '/etc/pki/tls/certs/mysql/client-key.pem';
