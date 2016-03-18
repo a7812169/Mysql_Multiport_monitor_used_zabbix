@@ -47,4 +47,4 @@ cp userparameter_percona_mysql.conf /usr/local/zabbix/etc/zabbix_agentd.conf.d<b
 	脚本中get_mysql_stats_wrapper.sh包含了监控的地址，默认是127.0.0.1<br>
 	因此,命令行之行 mysql -u'MYSQL_USER' -p'MYSQL_PASSWORD' -h127.0.0.1 -P'MYSQL_PORT' 必须成功。否则监控采集不到任何数据.
 
-
+####联系我  QQ：79376487
