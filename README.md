@@ -1,5 +1,7 @@
 # 使用zabbix监控MYSQL多端口数据库服务
 
+###为什么启动这个项目
+上网找了监控mysql的plugin,觉得percona-monitoring-plugins写的特别的好，可惜percona的仅仅支持一台机器一个mysql端口，而我们的机器一台机器有多个端口，于是产生了想法，结合zabbix的自动发现特性，让zabbix自动的发现服务器的端口，自动实现对mysql多端口的监控
 ###说明
 1. zabbix监控机模版和被监控端脚本均根据percona-monitoring-plugins1.1.5-1版进行修改，因此被监控端安装条件同原版插件相同，比如，必须安装php,php-mysql模块   
 2. mysql发现端口采用了网络端口监听的方法(当然也可以采用配置文件等静态的方法),这种方法的可取之处是动态发现，无需任何配置   
